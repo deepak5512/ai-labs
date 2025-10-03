@@ -82,7 +82,7 @@ export default function LogoShowcase({
   // onButtonClick,
 }: LogoShowcaseProps) {
   return (
-    <section className="relative mt-12 overflow-hidden bg-white md:mt-20 dark:bg-neutral-950">
+    <section className="relative h-screen overflow-hidden bg-white pt-12 md:pt-20 dark:bg-neutral-950">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
 
