@@ -65,7 +65,7 @@ export default function FAQsThree() {
                 Frequently Asked Questions
               </h2>
               <p className="text-muted-foreground mt-4">
-                Can't find what you're looking for? Contact our{" "}
+                Can&#39;t find what you&#39;re looking for? Contact our{" "}
                 <Link
                   href="#"
                   className="text-primary font-medium hover:underline"
