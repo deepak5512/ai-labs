@@ -1,15 +1,22 @@
-import '@/app/global.css';
-import { RootProvider } from 'fumadocs-ui/provider/next';
-import { Inter } from 'next/font/google';
+import "@/app/global.css";
+import { RootProvider } from "fumadocs-ui/provider/next";
+import { Metadata } from "next";
+import { Inter } from "next/font/google";
 
 const inter = Inter({
-  subsets: ['latin'],
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-export default function Layout({ children }: LayoutProps<'/'>) {
+export const metadata: Metadata = {
+  title: "AI Labs",
+  description: "All AI, ML, DL documentation at one place",
+};
+
+export default function Layout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={inter.className} suppressHydrationWarning>
-      <body className="flex flex-col min-h-screen">
+      <body className={`${inter.className} antialiased`}>
         <RootProvider>{children}</RootProvider>
       </body>
     </html>
