@@ -1,15 +1,9 @@
-import FAQsThree from "@/components/faqs-3";
-import Features from "@/components/features";
-import FooterSection from "@/components/footer";
-import HeroSection from "@/components/hero-section";
+import LogoShowcase from "@/components/showcase";
 
 export default function HomePage() {
   return (
     <>
-      <HeroSection />
-      <Features />
-      <FAQsThree />
-      <FooterSection />
+      <LogoShowcase />
     </>
   );
 }
