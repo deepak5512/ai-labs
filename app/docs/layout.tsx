@@ -3,6 +3,14 @@ import { baseOptions } from "@/lib/layout.shared";
 import { source } from "@/lib/source";
 import Image from "next/image";
 import { Logo } from "@/components/logo";
+import {
+  IconAi,
+  IconChartDots2,
+  IconDeviceImacCog,
+  IconLanguageHiragana,
+  IconSquareRoot2,
+} from "@tabler/icons-react";
+import { BrainCircuit } from "lucide-react";
 
 export default function Layout({ children }: LayoutProps<"/docs">) {
   return (
@@ -13,87 +21,45 @@ export default function Layout({ children }: LayoutProps<"/docs">) {
       sidebar={{
         tabs: [
           {
-            title: "Machine Learning",
-            description: "Machine Learning Docs",
-            url: "/docs/ml",
-            icon: (
-              <Image
-                src="/component.svg"
-                alt="Library Icon"
-                width={30}
-                height={30}
-              />
-            ),
-          },
-          {
-            title: "Deep Learning",
-            description: "Deep Learning Docs",
-            url: "/docs/dl",
-            icon: (
-              <Image
-                src="/component.svg"
-                alt="Library Icon"
-                width={30}
-                height={30}
-              />
-            ),
+            title: "Statistics",
+            description: "Stats basics",
+            url: "/docs/statistics",
+            icon: <IconChartDots2 width={20} height={20} />,
           },
           {
             title: "Mathematics",
-            description: "Mathematics Docs",
+            description: "Math concepts",
             url: "/docs/mathematics",
-            icon: (
-              <Image
-                src="/component.svg"
-                alt="Library Icon"
-                width={30}
-                height={30}
-              />
-            ),
+            icon: <IconSquareRoot2 width={20} height={20} />,
           },
           {
-            title: "Natural Language Processing",
-            description: "NLP Docs",
+            title: "Machine Learning",
+            description: "ML guides",
+            url: "/docs/ml",
+            icon: <IconDeviceImacCog width={20} height={20} />,
+          },
+          {
+            title: "Deep Learning",
+            description: "DL resources",
+            url: "/docs/dl",
+            icon: <BrainCircuit width={20} height={20} />,
+          },
+          {
+            title: "NLP",
+            description: "Language docs",
             url: "/docs/nlp",
-            icon: (
-              <Image
-                src="/component.svg"
-                alt="Library Icon"
-                width={30}
-                height={30}
-              />
-            ),
-          },
-          {
-            title: "Statistics",
-            description: "Statistics Docs",
-            url: "/docs/statistics",
-            icon: (
-              <Image
-                src="/component.svg"
-                alt="Library Icon"
-                width={30}
-                height={30}
-              />
-            ),
+            icon: <IconLanguageHiragana width={20} height={20} />,
           },
           {
             title: "Architectures",
-            description: "Architectures Docs",
+            description: "Model types",
             url: "/docs/architectures",
-            icon: (
-              <Image
-                src="/component.svg"
-                alt="Library Icon"
-                width={30}
-                height={30}
-              />
-            ),
+            icon: <IconAi width={20} height={20} />,
           },
         ],
       }}
       tree={source.pageTree}
-      githubUrl="https://deepakbhatter.com"
+      githubUrl="https://github.com/deepak5512/ai-labs"
       {...baseOptions}
     >
       {children}

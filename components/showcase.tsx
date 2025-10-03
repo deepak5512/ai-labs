@@ -4,6 +4,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { LogoIcon } from "./logo";
 import Link from "next/link";
+import {
+  IconAi,
+  IconChartDots2,
+  IconDeviceImacCog,
+  IconLanguageHiragana,
+  IconSquareRoot2,
+} from "@tabler/icons-react";
+import { BrainCircuit } from "lucide-react";
 
 interface Logo {
   id: string;
@@ -27,105 +35,49 @@ const defaultLogos: Logo[] = [
     name: "Mathematics",
     category: "Mathematics Docs",
     url: "/docs/mathematics",
-    svg: (
-      <svg viewBox="0 0 24 24" className="h-8 w-8">
-        <path
-          d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12z"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-        />
-        <path
-          d="m8 12 2 2 4-4"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    ),
+    svg: <IconSquareRoot2 />,
   },
   {
     id: "dl",
     name: "Deep Learning",
     category: "Deep Learning Docs",
     url: "/docs/dl",
-    svg: (
-      <svg viewBox="0 0 24 24" className="h-8 w-8">
-        <path d="M12 2L2 19.777h20L12 2z" fill="currentColor" />
-      </svg>
-    ),
+    svg: <BrainCircuit />,
   },
   {
     id: "ml",
     name: "Machine Learning",
     category: "Machine Learning Docs",
     url: "/docs/ml",
-    svg: (
-      <svg viewBox="0 0 24 24" className="h-8 w-8">
-        <path
-          d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.594-7.305h.003z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    svg: <IconDeviceImacCog />,
   },
   {
     id: "nlp",
     name: "Natural Language Processing",
     category: "NLP Docs",
     url: "/docs/nlp",
-    svg: (
-      <svg viewBox="0 0 24 24" className="h-8 w-8">
-        <path
-          d="M15.5 5.5a3 3 0 1 0-3 3h3v-3zM12.5 8.5h-3a3 3 0 1 0 0 6h3v-6zM12.5 17.5h-3a3 3 0 1 0 3 3v-3zM15.5 14.5a3 3 0 1 0 0-6v6z"
-          fill="currentColor"
-        />
-        <circle
-          cx="15.5"
-          cy="11.5"
-          r="3"
-          fill="currentColor"
-          fillOpacity="0.3"
-        />
-      </svg>
-    ),
+    svg: <IconLanguageHiragana />,
   },
   {
     id: "statistics",
     name: "Statistics",
     category: "Statistics Docs",
     url: "/docs/statistics",
-    svg: (
-      <svg viewBox="0 0 24 24" className="h-8 w-8">
-        <path
-          d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466l1.823 1.447zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.28c.093.466 0 .933-.466.98l-.747.14v10.264c-.66.42-1.26.42-1.68.047l-3.993-6.414v6.087l1.54.326s0 .933-1.307.933l-3.6-.233c-.094-.466 0-.933.466-1.027l1.214-.373V9.854L8.6 9.434c-.094-.466.14-1.133.793-1.18l3.88-.233 4.14 6.274V8.027l-1.307-.14c-.094-.56.187-1.026.747-1.073l3.333-.233z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    svg: <IconChartDots2 />,
   },
   {
     id: "architectures",
     name: "Model Architectures",
     category: "Model Architectures Docs",
     url: "/docs/architectures",
-    svg: (
-      <svg viewBox="0 0 24 24" className="h-8 w-8">
-        <path
-          d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    svg: <IconAi />,
   },
 ];
 
 export default function LogoShowcase({
   logos = defaultLogos,
-  title = "Trusted by industry leaders",
-  description = "Connect with the tools your team already uses. Built for modern workflows.",
+  title = "Explore AI Labs Knowledge Base",
+  description = "Browse documentation and resources for mathematics, machine learning, deep learning, NLP, & much more.",
   // buttonText = "View all integrations",
   // onButtonClick,
 }: LogoShowcaseProps) {
