@@ -133,7 +133,7 @@ export default function LogoShowcase({
                 type: "spring",
                 stiffness: 200,
               }}
-              className="flex justify-center"
+              className="hidden justify-center md:flex"
             >
               <div className="group relative">
                 {/* Glow effect */}
